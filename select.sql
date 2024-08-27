@@ -43,3 +43,10 @@ SELECT * FROM employee WHERE designation REGEXP '^Developer'; --fecteches all em
 
 --find out employee whose phone number ends with 55
 SELECT * FROM employee WHERE phoneNo LIKE '55%'
+
+-- IS NULL
+SELECT * FROM employee WHERE leaves IS NULL;
+
+--LIMIT clause
+SELECT * FROM WHERE salary >= 1000000 LIMIT 10; -- first 10
+SELECT * FROM WHERE salary >= 1000000 LIMIT 10, 10; --SKIP 10 and show next 10
