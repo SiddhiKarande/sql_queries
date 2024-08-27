@@ -32,6 +32,14 @@ SELECT * FROM employee WHERE (salary >= 500000 AND age<= 23);
 
  --LIKE operator
  SELECT * FROM employee WHERE firstName LIKE "%Amit%"; --name that includes amit
- SELECT * FROM employee WHERE firstName LIKE "%A"; --name that starts with A
- SELECT * FROM employee WHERE firstName LIKE "A%"; --name that ends with A
+ SELECT * FROM employee WHERE firstName LIKE "%A"; --name that ENDS with A
+ SELECT * FROM employee WHERE firstName LIKE "A%"; --name that STARTS with A
 
+--REGEXP operator
+SELECT * FROM employee WHERE designation REGEXP 'Developer'; --fecteches all employees whose designation has developer init
+SELECT * FROM employee WHERE designation REGEXP '^Developer'; --fecteches all employees whose designation starts with developer
+SELECT * FROM employee WHERE designation REGEXP 'Developer$'; --fecteches all employees whose designation ends with developer
+SELECT * FROM employee WHERE designation REGEXP '^Developer'; --fecteches all employees whose designation starts with developer
+
+--find out employee whose phone number ends with 55
+SELECT * FROM employee WHERE phoneNo LIKE '55%'
